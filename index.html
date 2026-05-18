@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi TKJ - Komputer & Jaringan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #121212; 
+            color: #e0e0e0; 
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1a1a1a; 
+            border-bottom: 1px solid #333; 
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #3a7bd5 0%, #00d2ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 0px 15px rgba(0, 210, 255, 0.4);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid-materi {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .kartu {
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px; 
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .kartu:hover {
+            border-color: #00d2ff; 
+            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.1); 
+        }
+
+        details summary {
+            list-style: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .kartu > details > summary h2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .kartu h2 {
+            font-size: 1.4rem;
+            color: #cccccc;
+        }
+
+        .kartu > details > summary h2::after {
+            content: '▾';
+            font-size: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .kartu > details[open] > summary h2::after {
+            transform: rotate(180deg);
+        }
+
+        .sub-materi {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #333;
+        }
+
+        .item-sub {
+            background: #222;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #3a7bd5;
+            transition: background 0.3s ease;
+        }
+
+        /* Tambahan efek hover untuk link Hardware */
+        a.link-materi {
+            text-decoration: none;
+            display: block;
+        }
+        
+        a.link-materi .item-sub:hover {
+            background: #2a2a2a;
+            border-left: 3px solid #00d2ff;
+        }
+
+        .item-sub h3 {
+            font-size: 1rem;
+            color: #00d2ff;
+            margin-bottom: 5px;
+        }
+
+        .item-sub > p {
+            font-size: 0.85rem;
+            color: #bbb;
+        }
+
+        @media screen and (max-width: 768px) {
+            header h1 { font-size: 1.5rem; }
+            .grid-materi { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DASAR DASAR JARINGAN, PRINTER, KOMPUTER</h1>
+    </header>
+
+    <main class="container">
+        <div class="grid-materi">
+            
+            <div class="kartu">
+                <h2>🌐 Jaringan Dasar</h2>
+                <p style="margin-top:10px; color:#888;">Konfigurasi MikroTik, Hotspot, dan Voucher.</p>
+            </div>
+
+            <div class="kartu">
+                <h2>🖨️ Hardware Printer</h2>
+                <p style="margin-top:10px; color:#888;">Maintenance Epson L-Series & G-Series.</p>
+            </div>
+
+            <div class="kartu">
+                <details>
+                    <summary>
+                        <h2>💻 Sistem Komputer</h2>
+                    </summary>
+                    <div class="sub-materi">
+                        
+                        <a href="hardware.html" class="link-materi">
+                            <div class="item-sub">
+                                <h3>🛠️ Hardware</h3>
+                                <p>Klik untuk membaca materi lengkap tentang komponen fisik komputer.</p>
+                            </div>
+                        </a>
+
+                        <div class="item-sub">
+                            <h3>💾 Software</h3>
+                            <p>Fokus pada sistem operasi dan pengembangan aplikasi.</p>
+                        </div>
+                        
+                        <div class="item-sub">
+                            <h3>🧠 Brainware</h3>
+                            <p>Peran manusia dalam sistem teknologi informasi.</p>
+                        </div>
+
+                    </div>
+                </details>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
